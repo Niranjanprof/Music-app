@@ -11,30 +11,27 @@
     <EditText
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
-        android:background="@color/colorPrimary"
-
         android:layout_height="wrap_content"
         android:ems="10"
         android:paddingTop="22dp"
         android:paddingLeft="24dp"
+
+        android:background="@color/colorPrimary"
         android:paddingRight="24dp"
         android:paddingBottom="15dp"
-
         android:inputType="textPersonName"
         android:hint="Search" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="horizontal">
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:id="@+id/home"
             android:text="Home"
-
             android:background="@color/colorPrimary"
-
             android:textSize="24sp"
 
             android:fontFamily="sans-serif-medium"
@@ -50,6 +47,7 @@
             android:textSize="24sp"
 
             android:background="@color/colorPrimary"
+
             android:id="@+id/lib"
             android:gravity="center"
 
@@ -57,12 +55,13 @@
             android:text="My Library"
             android:layout_height="wrap_content"/>
     </LinearLayout>
-    <GridView
+
+
+    <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/list"
         android:paddingTop="24dp"
-        android:numColumns="2"
         android:layout_marginBottom="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginLeft="16dp"
