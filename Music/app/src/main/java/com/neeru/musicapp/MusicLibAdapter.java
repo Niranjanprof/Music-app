@@ -11,18 +11,22 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MusicLibAdapter extends ArrayAdapter<Music> {
-    public MusicLibAdapter(Activity context, ArrayList<Music> music){super(context,0,music);}
+    public MusicLibAdapter(Activity context, ArrayList<Music> music) {
+        super(context, 0, music);
+    }
+
     @Override
-    public View getView(int position, View convertView, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_lib,parent,false);
+        if (listItemView == null) {
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_lib, parent, false);
         }
 
         Music currMusic = getItem(position);
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.Music);
         TextView artistTextView = (TextView) listItemView.findViewById(R.id.Artist);
-        ImageView imageView = (ImageView)listItemView.findViewById(R.id.img);
+        ImageView imageView = (ImageView) listItemView.findViewById(R.id.img);
+
 
         nameTextView.setText(currMusic.getMusicName());
         artistTextView.setText(currMusic.getMusicArtist());
@@ -30,4 +34,5 @@ public class MusicLibAdapter extends ArrayAdapter<Music> {
 
         return listItemView;
 
-    }}
+    }
+}

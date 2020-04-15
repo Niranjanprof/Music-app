@@ -21,6 +21,9 @@
         <activity
             android:name=".LibActivity"
             android:label="My Library"></activity>
+        <activity
+            android:name=".NowPlaying"
+            android:label="Now Playing"></activity>
     </application>
 
 </manifest>
